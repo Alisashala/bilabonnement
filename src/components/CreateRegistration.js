@@ -5,10 +5,12 @@ function CreateRegistration() {
 
   return (
     <div>
-      <h2>Create New Registration</h2>
+      <h2>Create New Registration love and affection</h2>
       {/* Add your form components and logic here */}
     </div>
   );
+
+
 }
 
 export default CreateRegistration;
