@@ -2,7 +2,7 @@
 // UpdatesAndNews.js
 
 import React from 'react';
-import './UpdatesAndNews.css';
+import '../styling/UpdatesAndNews.css';
 
 function UpdatesAndNews() {
   return (

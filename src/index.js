@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css'; // Import global styles
-import './components/Frontpage.css'; // Import Frontpage styles
-import './components/CreateAgreement.css'; // Import CreateAgreement styles
+import './styling/Frontpage.css'; // Import Frontpage styles
+import './styling/CreateAgreement.css'; // Import CreateAgreement styles
+import './styling/SupportAndHelp.css';
+import './styling/UpdatesAndNews.css';
+
 
 ReactDOM.render(
   <React.StrictMode>

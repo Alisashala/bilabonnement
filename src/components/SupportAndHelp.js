@@ -1,7 +1,5 @@
-// src/components/UpdatesAndNews.js
-
 import React from 'react';
-import './SupportAndHelp'; 
+import '../styling/SupportAndHelp.css'; 
 
 function SupportAndHelp() {
   return (

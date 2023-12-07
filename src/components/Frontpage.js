@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Frontpage.css'; // Import the CSS file
+import '../styling/Frontpage.css'; // Import the CSS file
 
 
 
