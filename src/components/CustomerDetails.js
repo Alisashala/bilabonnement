@@ -22,7 +22,6 @@ function CustomerDetails() {
       <p>Email: {customer.email}</p>
       <p>Region: {customer.region}</p>
       <p>CPR: {customer.cpr}</p>
-      <p>Region: {customer.region}</p>
       {/* Add other customer details as needed */}
     </div>
   );

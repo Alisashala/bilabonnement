@@ -32,14 +32,14 @@ function Frontpage() {
       </div>
 
       {/* View Agreements box */}
-      <Link to="/agreements" className="box-link">
+      <Link to="/customers" className="box-link">
         <div className="box agreements-box">
           <h2>View Agreements</h2>
         </div>
       </Link>
 
       {/* Create Agreement box */}
-      <Link to="/create-agreement" className="box-link">
+      <Link to="/create-customer" className="box-link">
         <div className="box create-agreement-box">
           <h2>Create Agreement</h2>
         </div>
