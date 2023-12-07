@@ -1,25 +1,157 @@
 /* src/components/Frontpage.css */
 
+
+/* Update margin for the boxes to be aligned on the right */
+.frontpage-content {
+  justify-content: flex-end;
+}
+
+/* Add style to frontpage container */
 .frontpage-container {
-    background-color: #fce4ec; /* Pastel pink */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #ff4081; /* Pink */
-    font-weight: bold;
-  }
-  
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Add style to frontpage content */
+.frontpage-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  flex-grow: 1; /* Allow navigation to take up all available space */
+}
+
+
+.nav-link {
+  text-decoration: none;
+  color: #000; /* Change link color to black */
+  font-weight: bold;
+  font-size: 1.2em; /* Adjust the font size of the navigation links */
+  transition: color 0.3s; /* Smooth color transition on hover */
+  margin-left: 30px; /* Adjust the margin between navigation links */
+}
+
+.nav-link:hover {
+  color: #add8e6; /* Change link color on hover */
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto; /* Move the navigation to the right */
+}
+
+/* Remove margin for "Support and Help" and "Updates and News" */
+nav ul li:nth-child(1),
+nav ul li:nth-child(2) {
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+nav ul li:nth-child(1) a,
+nav ul li:nth-child(2) a {
+  color: #add8e6; /* Baby Blue color */
+}
+
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.update-section,
+.support-section {
+  margin-bottom: 15px;
+}
+
+.update-title,
+.support-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+
+/* Remove extra margin from the logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.logo {
+  max-width: 200px; /* Adjust the maximum width of the logo as needed */
+  height: auto;
+  margin-right: 20px; /* Adjust the margin between the logo and navigation */
+}
+
+.logo-image {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Center and style the content boxes */
+.agreements-box,
+.create-agreement-box,
+.create-return-box {
+  width: 80%; /* Make the boxes take up 80% of the container width */
+  margin: 0 auto; /* Center the boxes */
+  border: 2px solid #add8e6; /* Set a bold border color for attention */
+  padding: 30px; /* Increase padding for larger boxes */
+  margin-top: 40px; /* Adjust the margin as needed */
+  text-align: center; /* Center text within the boxes */
+  cursor: pointer; /* Add a pointer cursor for a button-like feel */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions on hover */
+}
+
+/* Style text within the boxes like buttons */
+.agreements-box h2,
+.create-agreement-box h2,
+.create-return-box h2 {
+  font-size: 2em; /* Increase font size */
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  color: #add8e6; /* Set text color to match border color */
+}
+
+/* Apply button-like styles on hover */
+.agreements-box:hover,
+.create-agreement-box:hover,
+.create-return-box:hover {
+  background-color: #3e505a; /* Change background color on hover */
+  color: #fff; 
+}
+
+/* Make the entire box clickable */
+.box-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Style the welcome text */
+.welcome-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.welcome-text h1 {
+  font-size: 20px;
+  color: #333; /* Adjust the color as needed */
+}
+

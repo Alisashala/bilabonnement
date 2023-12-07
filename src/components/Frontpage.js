@@ -1,26 +1,55 @@
 // src/components/Frontpage.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Frontpage.css'; // Import the CSS file
 
+
+
 function Frontpage() {
   return (
     <div className="frontpage-container">
-      <h1>Welcome to the Front Page!</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/agreements">View Agreements</Link>
-          </li>
-          <li>
-            <Link to="/create-agreement">Create Agreement</Link>
-          </li>
-          <li>
-            <Link to="/create-return">Create Return</Link>
-          </li>
-          {/* Add more links as needed */}
-        </ul>
-      </nav>
+      <header>
+        <div className="logo-container">
+          <img src="logoimage.png" alt="Logo" className="logo" />
+        </div>
+        <nav>
+          <ul style={{ marginLeft: 'auto' }}>
+            <li>
+              <Link to="/support-and-help" className="nav-link">Support and Help</Link>
+            </li>
+            <li>
+              <Link to="/updates-and-news" className="nav-link">Updates and News</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      {/* Welcome text */}
+      <div className="welcome-text">
+        <h1>Welcome, User3827</h1>
+      </div>
+
+      {/* View Agreements box */}
+      <Link to="/agreements" className="box-link">
+        <div className="box agreements-box">
+          <h2>View Agreements</h2>
+        </div>
+      </Link>
+
+      {/* Create Agreement box */}
+      <Link to="/create-agreement" className="box-link">
+        <div className="box create-agreement-box">
+          <h2>Create Agreement</h2>
+        </div>
+      </Link>
+
+      {/* Create Return box */}
+      <Link to="/create-return" className="box-link">
+        <div className="box create-return-box">
+          <h2>Create Return</h2>
+        </div>
+      </Link>
     </div>
   );
 }
