@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AgreementList from './components/AgreementList';
-import CreateAgreement from './components/CreateAgreement';
+import CustomerList from './components/CustomerList';
+import CreateCustomer from './components/CreateCustomer';
 import CreateReturn from './components/CreateReturn';
-import DeleteAgreement from './components/DeleteAgreement';
-import EditAgreement from './components/EditAgreement';
-import ReturnedList from './components/ReturnedList';
+import DeleteCustomer from './components/DeleteCustomer';
+import EditCustomer from './components/EditCustomer';
+import CustomerDetails from './components/CustomerDetails';
 import Frontpage from './components/Frontpage';
 
 function App() {
@@ -13,15 +13,17 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Frontpage />} /> 
-        <Route path="/agreements" element={<AgreementList />} />  
-        <Route path="/create-agreement" element={<CreateAgreement />} />
-        <Route path="/agreement/:id" element={<AgreementList />} />
-        <Route path="/delete-agreement/:id" element={<DeleteAgreement />} />
-        <Route path="/edit-agreement/:id" element={<EditAgreement />} />
+        <Route path="/customers" element={<CustomerList />} />  
+        <Route path="/create-customer" element={<CreateCustomer />} />
+        <Route path="/customer/:id" element={<CustomerDetails />} />
+        <Route path="/delete-customer/:id" element={<DeleteCustomer />} />
+        <Route path="/edit-customer/:id" element={<EditCustomer />} />
 
         <Route path="/create-return" element={<CreateReturn />} />
-        <Route path="/returns" element={<ReturnedList />} />
-        <Route path="/return/:id" element={<ReturnedList />} />
+        {/* Adjust the following route based on your requirements */}
+        <Route path="/returns" element={<div>Returns Page</div>} />
+        {/* Adjust the following route based on your requirements */}
+        <Route path="/return/:id" element={<div>Return Details Page</div>} />
       </Routes>
     </Router>
   );

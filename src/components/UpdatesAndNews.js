@@ -13,4 +13,8 @@ function UpdatesAndNews() {
   );
 }
 
+
+
+
+
 export default UpdatesAndNews;

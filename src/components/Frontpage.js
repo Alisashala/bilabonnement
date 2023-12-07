@@ -21,6 +21,7 @@ function Frontpage() {
             <li>
               <Link to="/updates-and-news" className="nav-link">Updates and News</Link>
             </li>
+            
           </ul>
         </nav>
       </header>

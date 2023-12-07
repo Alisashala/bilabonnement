@@ -1,13 +1,48 @@
+.create-customer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+.create-customer-box {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
-.create-agreement-container {
-    background-color: #b2dfdb; /* Pastel green */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  h2 {
-    color: #00bcd4; /* Cyan */
-  }
-  
+.create-customer-box h2 {
+  color: #333;
+}
+
+.create-customer-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-customer-box label {
+  margin-bottom: 5px;
+}
+
+.create-customer-box input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.create-customer-box button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-customer-box button:hover {
+  background-color: #45a049;
+}
