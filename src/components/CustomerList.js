@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import '../styling/CustomerList.css';
 
 function CustomerList() {
   const [customers, setCustomers] = useState([]);
@@ -12,19 +13,19 @@ function CustomerList() {
   }, []);
 
   return (
-    <div>
-      <h2>Customer List</h2>
-      <ul>
+    <div id="customer-list-container">
+      <h2 id="customer-list-title">Registration</h2>
+      <ul id="customer-list">
         {customers.map(customer => (
-          <li key={customer.id}>
+          <li key={customer.id} className="customer-list-item">
             {customer.fullName} - 
-            <Link to={`/customer/${customer.id}`}>Details</Link> | 
-            <Link to={`/edit-customer/${customer.id}`}>Edit</Link> | 
-            <Link to={`/delete-customer/${customer.id}`}>Delete</Link>
+            <Link to={`/customer/${customer.id}`} className="customer-details-link">Details</Link> | 
+            <Link to={`/edit-customer/${customer.id}`} className="customer-list-action">Edit</Link> | 
+            <Link to={`/delete-customer/${customer.id}`} className="customer-list-action">Delete</Link>
           </li>
         ))}
       </ul>
-      <Link to="/create-customer">Add New Customer</Link>
+      <Link to="/create-customer" id="add-customer-link">Add New Registration</Link>
     </div>
   );
 }

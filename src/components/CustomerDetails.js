@@ -22,6 +22,10 @@ function CustomerDetails() {
       <p>Email: {customer.email}</p>
       <p>Region: {customer.region}</p>
       <p>CPR: {customer.cpr}</p>
+      <p>Price: {customer.price}</p>
+      <p>Car: {customer.brand} { customer.model}</p>
+      <p>Brændstof: {customer.braendstof}</p>
+      <p>Km/l: {customer.kml}</p>
       {/* Add other customer details as needed */}
     </div>
   );

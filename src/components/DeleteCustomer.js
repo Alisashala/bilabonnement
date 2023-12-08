@@ -1,31 +1,29 @@
-// src/components/CustomerList.js
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function DeleteCustomer() {
-  const [customers, setCustomers] = useState([]);
+  const { id } = useParams();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    axios.get('http://localhost:8080/api/customers')
-      .then(response => setCustomers(response.data))
-      .catch(error => console.error('Error fetching customers:', error));
-  }, []);
+  const handleDelete = () => {
+    axios.delete(`http://localhost:8080/api/customers/${id}`)
+      .then(() => {
+        navigate('/customers');
+        alert(`You've just deleted registration, ID: ${id}`);      })
+      .catch(error => console.error('Error deleting movie:', error));
+  };
+
+  const handleCancel = () => {
+    navigate('/customers');
+  };
 
   return (
     <div>
-      <h2>Customer List</h2>
-      <ul>
-        {customers.map(customer => (
-          <li key={customer.id}>
-            {customer.full_name} - 
-            <Link to={`/customer/${customer.id}`}>Details</Link> | 
-            <Link to={`/edit-customer/${customer.id}`}>Edit</Link> | 
-            <Link to={`/delete-customer/${customer.id}`}>Delete</Link>
-          </li>
-        ))}
-      </ul>
-      <Link to="/create-customer">Add New Customer</Link>
+      <h2>Delete Registration</h2>
+      <p>Are you sure you want to delete this registration?</p>
+      <button onClick={handleDelete}>Yes, Delete</button>
+      <button onClick={handleCancel}>No, Cancel</button>
     </div>
   );
 }
