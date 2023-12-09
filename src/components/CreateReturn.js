@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styling/CreateReturn.css';
 
-
 function CreateReturn() {
   const navigate = useNavigate();
   const [newReturn, setNewReturn] = useState({
@@ -11,13 +10,14 @@ function CreateReturn() {
     model: '',
     damageType: '',
     damageDescription: '',
-    damageLevel: '',
+    damageLevel: '', // Update initial state
+    damageCost: ''
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('http://localhost:8080/api/damagereports', newReturn)
-      .then(() => navigate('/returns'))
+      .then(() => navigate('/damagereports'))
       .catch(error => console.error('Error creating return:', error));
   };
 
@@ -49,6 +49,7 @@ function CreateReturn() {
               required
             />
           </div>
+
           <div>
             <label>Damage Type:</label>
             <input
@@ -69,9 +70,23 @@ function CreateReturn() {
           </div>
           <div>
             <label>Damage Level:</label>
-            <input
+            <select
               name="damageLevel"
               value={newReturn.damageLevel}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select Damage Level</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+          <div>
+            <label>Damage Cost:</label>
+            <input
+              name="damageCost"
+              value={newReturn.damageCost}
               onChange={handleChange}
               required
             />
