@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
+import '../styling/EditCustomer.css';
 
 function EditCustomer() {
     const { id } = useParams();
@@ -35,84 +36,79 @@ function EditCustomer() {
     };
 
     return (
-        <div>
-            <h2>Edit Registration</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Full Name:</label>
-                    <input
-                        name="fullName"
-                        value={customer.fullName}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <label>CPR:</label>
-                    <input
-                        type="number"
-                        name="cpr"
-                        value={customer.cpr}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-            <label>Region:</label>
-            <input
-              name="region"
-              value={customer.region}
-              onChange={handleChange}
-            
-            />
-          </div>
-          <div>
-            <label>Price:</label>
-            <input
-              name="price"
-              value={customer.price}
-              onChange={handleChange}
-              
-            />
-          </div>
-          <div>
-            <label>Brand:</label>
-            <input
-              name="brand"
-              value={customer.brand}
-              onChange={handleChange}
-              
-            />
-          </div>
-          <div>
-            <label>Model:</label>
-            <input
-              name="model"
-              value={customer.model}
-              onChange={handleChange}
-              
-            />
-          </div>
-          <div>
-            <label>Brændstof:</label>
-            <input
-              name="braendstof"
-              value={customer.braendstof}
-              onChange={handleChange}
-              
-            />
-          </div>
-          <div>
-            <label>Km/l:</label>
-            <input
-              name="kml"
-              value={customer.kml}
-              onChange={handleChange}
-              
-            />
-          </div>
-                <button type="submit">Update Registration</button>
-            </form>
+        <div className="edit-customer-container">
+            <div className="edit-customer-box">
+                <h2>Edit Registration</h2>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label>Full Name</label>
+                        <input
+                            name="fullName"
+                            value={customer.fullName}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div>
+                        <label>CPR</label>
+                        <input
+                            type="number"
+                            name="cpr"
+                            value={customer.cpr}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div>
+                        <label>Region</label>
+                        <input
+                            name="region"
+                            value={customer.region}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div>
+                        <label>Price</label>
+                        <input
+                            name="price"
+                            value={customer.price}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div>
+                        <label>Brand</label>
+                        <input
+                            name="brand"
+                            value={customer.brand}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div>
+                        <label>Model</label>
+                        <input
+                            name="model"
+                            value={customer.model}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div>
+                        <label>Fuel</label>
+                        <input
+                            name="braendstof"
+                            value={customer.braendstof}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div>
+                        <label>Km/l</label>
+                        <input
+                            name="kml"
+                            value={customer.kml}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <button type="submit">Update Registration</button>
+                </form>
+            </div>
         </div>
-
     );
 }
 

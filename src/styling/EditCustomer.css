@@ -1,0 +1,58 @@
+/* EditCustomer.css */
+
+.edit-customer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.edit-customer-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+.edit-customer-box h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.edit-customer-box form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.edit-customer-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-customer-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.edit-customer-box button {
+        background-color: #add8e6;
+        color: #000000;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+      }
+
+.edit-customer-box button:hover {
+    background-color: #1c5c7e;
+}

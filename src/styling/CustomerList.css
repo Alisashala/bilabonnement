@@ -1,0 +1,137 @@
+/* CustomerList.css */
+
+/* Styles for the header */
+.header-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .logo-container2 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+    margin-left: 30px;
+  }
+  
+  .nav-link:hover {
+    color: #147ab0;
+  }
+  
+  /* Styles for the main content */
+  #customer-list-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #customer-list-title {
+    color: #333;
+  }
+  
+  #customer-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .customer-list-item {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  
+  .customer-list-item:hover {
+    background-color: #eaeaea;
+  }
+  
+  .customer-id {
+    font-size: 0.8em;
+    color: #888;
+  }
+  
+  .customer-name {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .customer-links-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .customer-details-link,
+  .customer-delete-action,
+  .customer-edit-action {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    
+
+  }
+  
+  .customer-details-link:hover,
+  .customer-delete-action:hover,
+  .customer-edit-action:hover {
+    background-color: #147ab0;
+    color: #fff;
+  }
+  
+  .customer-details-link {
+    background-color: #2ecc71; /* Green color for details link */
+    color: #fff;
+    margin-left: 400px;
+  }
+  
+  .customer-delete-action {
+    background-color: #cc2e2e; /* Red color for delete link */
+    color: #fff;
+    margin-right: 5px; /* Adjusted margin to bring buttons closer */
+  }
+  
+  .customer-edit-action {
+    background-color: #2ecc71; /* Green color for edit link */
+    color: #fff;
+    margin-right: 5px; /* Adjusted margin to bring buttons closer */
+  }
+  
+  #add-customer-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #147ab0;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #add-customer-link:hover {
+    background-color: #3e505a;
+  }
+  
