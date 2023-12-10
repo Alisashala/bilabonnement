@@ -1,20 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import '../styling/CreateAgreement.css';
+import { useNavigate, Link } from 'react-router-dom'; // Remove 'useNavigate' from this line
+import '../styling/CreateAgreement.css'; // Import the existing CSS file
 
 
 function CreateCustomer() {
   const navigate = useNavigate();
   const [newCustomer, setNewCustomer] = useState({
-    fullName: '',
-    email: '',
-    region: '',
-    price: '',
-    brand: '',
-    model: '',
-    braendstof: '',
-    kml: ''
+    // ... existing state ...
   });
 
   const handleSubmit = (e) => {
@@ -30,12 +23,30 @@ function CreateCustomer() {
   };
 
   return (
-    <div className="create-customer-container">
-      <div className="create-customer-box">
-        <h2>Create New Customer</h2>
-        <form onSubmit={handleSubmit}>
+    <div>
+      <header>
+      <div className="header-container">
+        <div className="logo-container2">
+          <img src="logoimage.png" alt="Logo" className="logo" />
+        </div>
+        <nav>
+          <ul>
+            <li>
+            <Link to="/" className="nav-link">Home</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      </header>
+      
+
+      {/* Main Content */}
+      <div className="create-customer-container">
+        <div className="create-customer-box">
+          <h2>Create New Agreement</h2>
+          <form onSubmit={handleSubmit}>
           <div>
-            <label>Full Name: </label>
+            <label>Full Name </label>
             <input
               name="fullName"
               value={newCustomer.fullName}
@@ -44,7 +55,7 @@ function CreateCustomer() {
             />
           </div>
           <div>
-            <label>Email: </label>
+            <label>Email </label>
             <input
               type="email"
               name="email"
@@ -54,7 +65,7 @@ function CreateCustomer() {
             />
           </div>
           <div>
-            <label>CPR: </label>
+            <label>CPR </label>
             <input
               type="cpr"
               name="cpr"
@@ -64,7 +75,7 @@ function CreateCustomer() {
             />
           </div>
           <div>
-            <label>Region: </label>
+            <label>Region </label>
             <input
               name="region"
               value={newCustomer.region}
@@ -73,7 +84,7 @@ function CreateCustomer() {
             />
           </div>
           <div>
-            <label>Price: </label>
+            <label>Price </label>
             <input
               name="price"
               value={newCustomer.price}
@@ -82,7 +93,7 @@ function CreateCustomer() {
             />
           </div>
           <div>
-            <label>Brand: </label>
+            <label>Brand </label>
             <input
               name="brand"
               value={newCustomer.brand}
@@ -91,7 +102,7 @@ function CreateCustomer() {
             />
           </div>
           <div>
-            <label>Model: </label>
+            <label>Model </label>
             <input
               name="model"
               value={newCustomer.model}
@@ -100,7 +111,7 @@ function CreateCustomer() {
             />
           </div>
           <div>
-            <label>Brændstof: </label>
+            <label>Fuel </label>
             <input
               name="braendstof"
               value={newCustomer.braendstof}
@@ -109,7 +120,7 @@ function CreateCustomer() {
             />
           </div>
           <div>
-            <label>Km/l: </label>
+            <label>Km/l </label>
             <input
               name="kml"
               value={newCustomer.kml}
@@ -117,9 +128,10 @@ function CreateCustomer() {
               required
             />
           </div>
-          <button type="submit">Create Customer</button>
+          <button type="submit">Create Agreement</button>
         </form>
       </div>
+    </div>
     </div>
   );
 }

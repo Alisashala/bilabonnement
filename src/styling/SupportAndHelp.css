@@ -1,1 +1,41 @@
-   /* src/components/SupportAndHelp.css */
+/* src/styling/SupportAndHelp.css */
+
+ 
+ /* Add any additional styles needed for your content */
+ .support-and-help-content p {
+   margin-bottom: 15px;
+ }
+
+ .support-and-help-container {
+   background-color: #ffffff;
+   padding: 20px;
+   border-radius: 10px;
+   text-align: center;
+ }
+
+/* Style the navigation link in SupportAndHelp */
+.nav-link {
+  text-decoration: none;
+  color: #000; /* Change link color to black */
+  font-weight: bold;
+  font-size: 1.2em; /* Adjust the font size of the navigation links */
+  transition: color 0.3s; /* Smooth color transition on hover */
+  margin-left: 30px; /* Adjust the margin between navigation links */
+}
+
+/* Style the home link to make it more prominent */
+.nav-link.home {
+  color: #add8e6; /* Change color to a prominent one, adjust as needed */
+}
+
+.nav-link:hover {
+  color: #add8e6; /* Change link color on hover */
+}
+
+/* Add styles for specific page content */
+.support-and-help-content {
+   width: 80%;
+   margin: 0 auto;
+   margin-top: 40px;
+   text-align: left; /* Align text to the left */
+}

@@ -1,17 +1,62 @@
+/* src/styling/CreateCustomer.css */
 
-.create-customer-container {
+/* Styles for the header */
+.header-container {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1); /* Only shadow on the bottom */
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Align items horizontally */
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Adjust the width to make the header longer horizontally */
+  margin: auto; /* Center the header horizontally */
+}
+
+.logo-container1 {
+  display: flex;
   align-items: center;
-  height: 100vh;
+  margin-top: 10px;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s;
+  margin-left: 30px;
+}
+
+.nav-link:hover {
+  color: #add8e6;
+}
+
+/* Styles for the main content */
+.create-customer-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .create-customer-box {
-  background-color: #f4f4f4;
-  padding: 20px;
+  background-color: #ffffff;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 40px;
 }
 
 .create-customer-box h2 {
@@ -21,29 +66,34 @@
 .create-customer-box form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .create-customer-box label {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
+/* input fields  */
 .create-customer-box input {
-  padding: 8px;
-  margin-bottom: 10px;
+  width: 80%;
+  max-width: 400px;
+  padding: 12px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
+/* Submit button*/
 .create-customer-box button {
-  background-color: #4caf50;
+  background-color: #3e505a;
   color: #fff;
-  padding: 10px;
+  padding: 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .create-customer-box button:hover {
-  background-color: #45a049;
+  background-color: #1c252a;
 }

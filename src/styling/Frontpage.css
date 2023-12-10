@@ -1,11 +1,5 @@
 /* src/components/Frontpage.css */
 
-
-/* Update margin for the boxes to be aligned on the right */
-.frontpage-content {
-  justify-content: flex-end;
-}
-
 /* Add style to frontpage container */
 .frontpage-container {
   background-color: #ffffff; /* White background */
@@ -21,18 +15,17 @@
   justify-content: space-between;
   align-items: stretch;
 }
-  
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1); /* Only shadow on the bottom */
 }
 
 nav {
   flex-grow: 1; /* Allow navigation to take up all available space */
 }
-
 
 .nav-link {
   text-decoration: none;
@@ -89,7 +82,7 @@ h2 {
 
 
 /* Remove extra margin from the logo */
-.logo-container {
+.logo-container1 {
   display: flex;
   align-items: center;
 }
@@ -99,6 +92,7 @@ h2 {
   max-width: 200px; /* Adjust the maximum width of the logo as needed */
   height: auto;
   margin-right: 20px; /* Adjust the margin between the logo and navigation */
+  margin-bottom: 10px;
 }
 
 .logo-image {

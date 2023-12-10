@@ -10,7 +10,7 @@ function Frontpage() {
   return (
     <div className="frontpage-container">
       <header>
-        <div className="logo-container">
+        <div className="logo-container1">
           <img src="logoimage.png" alt="Logo" className="logo" />
         </div>
         <nav>

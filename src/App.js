@@ -27,8 +27,8 @@ function App() {
         {/* Adjust the following route based on your requirements */}
         <Route path="/return/:id" element={<div>Return Details Page</div>} />
 
-        <Route path="/support-and-help" element={<div>Support And Help</div>} />
-        <Route path="/updates-and-news" element={<div>Updates And News</div>} />
+        <Route path="/support-and-help" element={<SupportAndHelp />} />
+        <Route path="/updates-and-news" element={<UpdatesAndNews />} />
 
       </Routes>
     </Router>
