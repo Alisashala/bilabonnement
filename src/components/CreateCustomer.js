@@ -3,11 +3,17 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom'; // Remove 'useNavigate' from this line
 import '../styling/CreateAgreement.css'; // Import the existing CSS file
 
-
 function CreateCustomer() {
   const navigate = useNavigate();
   const [newCustomer, setNewCustomer] = useState({
-    // ... existing state ...
+    fullName: '',
+    email: '',
+    region: '',
+    price: '',
+    brand: '',
+    model: '',
+    braendstof: '',
+    kml: '',
   });
 
   const handleSubmit = (e) => {
@@ -75,13 +81,21 @@ function CreateCustomer() {
             />
           </div>
           <div>
-            <label>Region </label>
-            <input
+
+            <label>Region: </label>
+            <select
               name="region"
               value={newCustomer.region}
               onChange={handleChange}
               required
-            />
+            >
+              <option value="">Select Region</option>
+              <option value="Region Nordjylland">Region Nordjylland</option>
+              <option value="Region Syddanmark">Region Syddanmark</option>
+              <option value="Region Sjælland">Region Sjælland</option>
+              <option value="Region Hovedstaden">Region Hovedstaden</option>
+              <option value="Region Midtjylland">Region Midtjylland</option>
+            </select>
           </div>
           <div>
             <label>Price </label>

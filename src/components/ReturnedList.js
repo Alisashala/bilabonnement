@@ -13,18 +13,17 @@ function ReturnedList() {
 
   return (
     <div>
-      <h2>returned List</h2>
+      <h2>Returned List</h2>
       <ul>
         {returns.map(newReturn => (
           <li key={newReturn.id}>
             {newReturn.brand} - 
-            <Link to={`/return/${newReturn.id}`}>Details</Link> | 
-            <Link to={`/edit-return/${newReturn.id}`}>Edit</Link> | 
-            <Link to={`/delete-return/${newReturn.id}`}>Delete</Link>
+            <Link to={`/damagereports/${newReturn.id}`}>Details</Link>
           </li>
         ))}
       </ul>
-      <Link to="/create-return">Add New return</Link>
+      <Link to="/create-return">Add New Return</Link>
+      <Link to="/damage-cost-overview">Damage Cost Overview</Link>
     </div>
   );
 }

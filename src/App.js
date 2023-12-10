@@ -9,27 +9,30 @@ import CustomerDetails from './components/CustomerDetails';
 import Frontpage from './components/Frontpage';
 import SupportAndHelp from './components/SupportAndHelp';
 import UpdatesAndNews from './components/UpdatesAndNews';
+import ReturnedList from './components/ReturnedList';
+import ReturnDetails from './components/ReturnDetails';
+import DeleteReturn from './components/DeleteReturn';
+import DamageCostOverview from './components/DamageCostOverview'; // Import the new component
 
 function App() {
-  return ( 
+  return (
     <Router>
       <Routes>
-        <Route path="/" element={<Frontpage />} /> 
-        <Route path="/customers" element={<CustomerList />} />  
+        <Route path="/" element={<Frontpage />} />
+        <Route path="/customers" element={<CustomerList />} />
         <Route path="/create-customer" element={<CreateCustomer />} />
         <Route path="/customer/:id" element={<CustomerDetails />} />
         <Route path="/delete-customer/:id" element={<DeleteCustomer />} />
         <Route path="/edit-customer/:id" element={<EditCustomer />} />
 
+        <Route path="/delete-damagereport/:id" element={<DeleteReturn />} />
         <Route path="/create-return" element={<CreateReturn />} />
-        {/* Adjust the following route based on your requirements */}
-        <Route path="/returns" element={<div>Returns Page</div>} />
-        {/* Adjust the following route based on your requirements */}
-        <Route path="/return/:id" element={<div>Return Details Page</div>} />
+        <Route path="/damagereports" element={<ReturnedList />} />
+        <Route path="/damagereports/:id" element={<ReturnDetails />} />
+        <Route path="/damage-cost-overview" element={<DamageCostOverview />} /> {/* New route for DamageCostOverview */}
 
         <Route path="/support-and-help" element={<SupportAndHelp />} />
         <Route path="/updates-and-news" element={<UpdatesAndNews />} />
-
       </Routes>
     </Router>
   );
