@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import '../styling/DamageCostOverview.css'; // Import the CSS file
 
 function DamageCostOverview() {
   const [damageCosts, setDamageCosts] = useState([]);
@@ -37,18 +38,24 @@ function DamageCostOverview() {
   };
 
   return (
-    <div>
-      <h2>Damage Cost Overview</h2>
-      <button onClick={handleSort}>Sort {sortOrder === 'asc' ? 'Descending' : 'Ascending'}</button>
-      <ul>
-        {sortedCosts.map(item => (
-          <li key={item.id}>
-            ID: {item.id} - Cost: {item.cost}
-          </li>
-        ))}
-      </ul>
-      <p>Total Damage Cost: ${calculateTotal()}</p>
-      <Link to="/damagereports">Back to Returned List</Link>
+    <div className="damage-cost-container">
+      <div className="damage-cost-box">
+        <h2>Damage Cost Overview</h2>
+        <button className="sort-button" onClick={handleSort}>
+          Sort {sortOrder === 'asc' ? 'Low to High' : 'High to Low'}
+        </button>
+        <ul className="cost-list">
+          {sortedCosts.map(item => (
+            <li key={item.id}>
+              <strong>ID:</strong> {item.id} - <strong>Cost:</strong> ${item.cost}
+            </li>
+          ))}
+        </ul>
+        <p className="total-cost">
+          <span className="highlight-text">Total Damage Cost:</span> ${calculateTotal() }
+        </p>
+        <Link to="/damagereports" className="back-button">Back to Returned List</Link>
+      </div>
     </div>
   );
 }

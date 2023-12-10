@@ -43,8 +43,8 @@
 }
 
 .edit-customer-box button {
-        background-color: #add8e6;
-        color: #000000;
+    background-color: #3e505a;
+    color: #fff;
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
@@ -54,5 +54,5 @@
       }
 
 .edit-customer-box button:hover {
-    background-color: #1c5c7e;
+    background-color: #1c252a;
 }

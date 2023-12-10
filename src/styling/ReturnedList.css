@@ -1,0 +1,114 @@
+/* Styles for the header */
+.header-container-returned-list {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .logo-container-returned-list {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .logo {
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .nav-link-returned-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+    margin-left: 30px;
+  }
+  
+  .nav-link-returned-link:hover {
+    color: #add8e6;
+  }
+  
+  /* Styles for the main content */
+  #returned-list-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #returned-list-title {
+    color: #333;
+  }
+  
+  #returned-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .returned-list-item {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .returned-list-item:hover {
+    background-color: #eaeaea;
+  }
+  
+  .return-brand {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .return-details-link {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .return-details-link:hover {
+    background-color: add8e6;
+    color: #fff;
+  }
+  
+  #add-return-link,
+  #damage-cost-link {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px; /* Add margin-right for space between buttons */
+    text-decoration: none;
+    background-color: #3e505a;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  #add-return-link:hover,
+  #damage-cost-link:hover {
+    background-color: #1c252a;
+  }
+
+
+
+

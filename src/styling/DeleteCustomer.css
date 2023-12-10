@@ -40,7 +40,7 @@
     transition: background-color 0.3s ease;
   }
   .cancel-button {
-    background-color: #add8e6;
+    background-color: #3e505a;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -54,6 +54,6 @@
   }
   
   .cancel-button:hover {
-    background-color: #3498db;
+    background-color: #1c252a;
   }
   
