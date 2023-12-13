@@ -45,17 +45,19 @@ function ReturnedList() {
               <span className="customer-id">ID: {newReturn.id}</span>
               <br />
               <span className="customer-name">{newReturn.brand}</span>
+              <div className='customer-links-container'>
               <Link to={`/damagereports/${newReturn.id}`} className="customer-details-link">
                 Details
               </Link>{' '}
-              |
+              
               <Link to={`/delete-damagereport/${newReturn.id}`} className="customer-delete-action">
                 Delete
               </Link>
+              </div>
             </li>
           ))}
         </ul>
-        <Link to="/create-return" id="add-customer-link">
+        <Link to="/create-return" id="add-return-link" >
           Add New Return
         </Link>
       </div>
