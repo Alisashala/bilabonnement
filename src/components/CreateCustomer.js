@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom'; // Remove 'useNavigate' from this line
 import '../styling/CreateAgreement.css'; // Import the existing CSS file
@@ -56,7 +56,7 @@ function CreateCustomer() {
       <div className="create-customer-container">
         <div className="create-customer-box">
           <h1>Create New Agreement</h1>
-          <form onSubmit={handleSubmit} className="form-container">
+          <form onSubmit={handleSubmit} className="form-container" id="create-customer-form">
             <div className="form-section">
               <h2>Customer Details</h2>
               <div>
@@ -161,8 +161,11 @@ function CreateCustomer() {
                 />
               </div>
             </div>
+            
           </form>
-          <button className="submit-button" type="submit">Create Agreement</button>
+          <button className="submit-button" type="submit" form="create-customer-form">
+            Create Agreement
+          </button>
 
         </div>
       </div>
