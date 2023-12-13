@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom'; // Remove 'useNavigate' from this line
 import '../styling/CreateAgreement.css'; // Import the existing CSS file
 
-// ... (Your existing imports)
+
 
 function CreateCustomer() {
   const navigate = useNavigate();
