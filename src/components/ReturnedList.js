@@ -1,8 +1,29 @@
+// ReturnedList.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../styling/ReturnedList.css';
 
+function Header() {
+  return (
+    <header>
+      <div className="header-container">
+        <div className="logo-container2">
+          <img src="logoimage.png" alt="Logo" className="logo" />
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
+}
 
 function ReturnedList() {
   const [returns, setReturns] = useState([]);
@@ -16,47 +37,29 @@ function ReturnedList() {
   return (
     <div>
       <Header />
-      <div id="returned-list-container">
-        <h2 id="returned-list-title">Returned List</h2>
-        <ul id="returned-list">
+      <div id="customer-list-container">
+        <h2 id="customer-list-title">Returned List</h2>
+        <ul id="customer-list">
           {returns.map(newReturn => (
-            <li key={newReturn.id} className="returned-list-item">
-              <span className="return-brand">{newReturn.brand}</span> 
-              <Link to={`/damagereports/${newReturn.id}`} className="return-details-link">
+            <li key={newReturn.id} className="customer-list-item">
+              <span className="customer-id">ID: {newReturn.id}</span>
+              <br />
+              <span className="customer-name">{newReturn.brand}</span>
+              <Link to={`/damagereports/${newReturn.id}`} className="customer-details-link">
                 Details
+              </Link>{' '}
+              |
+              <Link to={`/delete-damagereport/${newReturn.id}`} className="customer-delete-action">
+                Delete
               </Link>
             </li>
           ))}
         </ul>
-        <Link to="/create-return" id="add-return-link">
+        <Link to="/create-return" id="add-customer-link">
           Add New Return
-        </Link>
-        <Link to="/damage-cost-overview" id="damage-cost-link">
-          Damage Cost Overview
         </Link>
       </div>
     </div>
-  );
-}
-
-function Header() {
-  return (
-    <header>
-      <div className="header-container-returned-list">
-        <div className="logo-container-returned-list">
-          <img src="logoimage.png" alt="Logo" className="logo" />
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/" className="nav-link-returned-link">
-                Home
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
   );
 }
 
