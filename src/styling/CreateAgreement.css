@@ -63,7 +63,6 @@
   color: #333;
 }
 
-
 .form-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -72,10 +71,8 @@
 
 .form-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
-
 
 .form-section h2 {
   text-align: center;
@@ -95,6 +92,7 @@
   border-radius: 5px;
   box-sizing: border-box; /* Ensure padding and border don't affect width */
 }
+
 .car-details-row {
   display: flex;
   flex-wrap: wrap;
@@ -105,26 +103,25 @@
   width: 48%; /* Adjust as needed, leaving a small gap between the fields */
 }
 
-.create-customer-box button {
-  background-color: #3e505a;
-  color: #fff;
-  padding: 15px;
-  border: none;
+.create-customer-box {
+  background-color: #ffffff;
+  padding: 40px;
   border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  align-self: center;
-
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column; /* Ensure the items are stacked vertically */
+  align-items: center; /* Center items horizontally */
 }
 
-.create-customer-box button:hover {
+#button-create-customer:hover {
   background-color: #1c252a;
 }
-
-
 
 .form-section div {
   width: 48%; /* Adjust as needed, leaving a small gap between the fields */
 }
-
-

@@ -1,10 +1,7 @@
-
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom'; // Remove 'useNavigate' from this line
-import '../styling/CreateAgreement.css'; // Import the existing CSS file
-
-// ... (Your existing imports)
+import { useNavigate, Link } from 'react-router-dom';
+import '../styling/CreateAgreement.css';
 
 function CreateCustomer() {
   const navigate = useNavigate();
@@ -55,7 +52,6 @@ function CreateCustomer() {
         </div>
       </header>
 
-      {/* Main Content */}
       <div className="create-customer-container">
         <div className="create-customer-box">
           <h2>Create New Agreement</h2>
@@ -126,24 +122,24 @@ function CreateCustomer() {
                 />
               </div>
               <div className="car-details-row">
-              <div>
-                <label>Brand </label>
-                <input
-                  name="brand"
-                  value={newCustomer.brand}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <label>Model </label>
-                <input
-                  name="model"
-                  value={newCustomer.model}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+                <div>
+                  <label>Brand </label>
+                  <input
+                    name="brand"
+                    value={newCustomer.brand}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <label>Model </label>
+                  <input
+                    name="model"
+                    value={newCustomer.model}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
               </div>
               <div>
                 <label>Fuel </label>
@@ -164,7 +160,7 @@ function CreateCustomer() {
                 />
               </div>
             </div>
-            <button className="submit-button" type="submit">Create Agreement</button>
+            <button className="submit-button" id={"submit"} type="submit">Create Agreement</button>
           </form>
         </div>
       </div>
