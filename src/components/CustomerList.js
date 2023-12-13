@@ -58,7 +58,7 @@ function CustomerList() {
         </Link>
 
         <h4>
-          <strong>Total Price:</strong> <div id='total-price'> {totalPrice.toFixed(2)} DKK </div>  
+          <strong>Total Subscription Price:</strong> <div id='total-price'> {totalPrice.toFixed(2)} DKK </div>  
           </h4>
           <h4>
           <strong id='total-registrations-title'>Total Registrations:</strong>  <div id='total-registrations'>{totalRegistrations}</div>
