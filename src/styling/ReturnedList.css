@@ -130,6 +130,20 @@
   transition: background-color 0.3s ease;
 }
 
+#damage-cost-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 50px;
+  margin-left: 210px; /* Adjusted margin for better spacing */
+  text-decoration: none;
+  background-color: #3e505a;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
 #customer-name {
   margin-right: 50px;
 }

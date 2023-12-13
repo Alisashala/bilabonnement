@@ -57,9 +57,14 @@ function ReturnedList() {
             </li>
           ))}
         </ul>
-        <Link to="/create-return" id="add-return-link" >
-          Add New Return
-        </Link>
+         <div >
+            <Link to="/damage-cost-overview" id="damage-cost-link">
+              Damage Cost Overview
+            </Link>
+            <Link to="/create-return" id="add-return-link" >
+              Add New Return
+            </Link>
+          </div>
       </div>
     </div>
   );
