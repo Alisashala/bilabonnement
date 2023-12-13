@@ -20,8 +20,7 @@ function CreateCustomer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post('http://localhost:8080/api/customers', newCustomer)
+      axios.post('http://localhost:8080/api/customers', newCustomer)
       .then(() => navigate('/customers'))
       .catch((error) =>
         console.error('Error creating customer:', error)
