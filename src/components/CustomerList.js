@@ -1,4 +1,3 @@
-// CustomerList.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -27,17 +26,26 @@ function Header() {
 
 function CustomerList() {
   const [customers, setCustomers] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     axios
       .get('http://localhost:8080/api/customers')
-      .then((response) => setCustomers(response.data))
+      .then((response) => {
+        setCustomers(response.data);
+        // Calculate total price
+        const total = response.data.reduce(
+          (accumulator, customer) => accumulator + parseFloat(customer.price),
+          0
+        );
+        setTotalPrice(total);
+      })
       .catch((error) => console.error('Error fetching customers:', error));
   }, []);
 
   return (
     <div>
-      <Header /> {/* Include the Header component */}
+      <Header />
       <div id="customer-list-container">
         <h2 id="customer-list-title">Registrations</h2>
         <ul id="customer-list">
@@ -69,10 +77,16 @@ function CustomerList() {
             </li>
           ))}
         </ul>
+
+        <h4>
+          <strong>Total Price:</strong> {totalPrice.toFixed(2)}
+        </h4>
+  
         <Link to="/create-customer" id="add-customer-link">
           Add New Registration
         </Link>
       </div>
+    
     </div>
   );
 }
