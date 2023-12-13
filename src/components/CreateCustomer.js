@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom'; // Remove 'useNavigate' from this line
 import '../styling/CreateAgreement.css'; // Import the existing CSS file
 
-// ... (Your existing imports)
 
 function CreateCustomer() {
   const navigate = useNavigate();
@@ -54,10 +53,9 @@ function CreateCustomer() {
         </div>
       </header>
 
-      {/* Main Content */}
       <div className="create-customer-container">
         <div className="create-customer-box">
-          <h2>Create New Agreement</h2>
+          <h1>Create New Agreement</h1>
           <form onSubmit={handleSubmit} className="form-container">
             <div className="form-section">
               <h2>Customer Details</h2>
@@ -116,7 +114,7 @@ function CreateCustomer() {
             <div className="form-section">
               <h2>Car Details</h2>
               <div>
-                <label>Price </label>
+                <label>Subscription Price </label>
                 <input
                   name="price"
                   value={newCustomer.price}
@@ -163,8 +161,9 @@ function CreateCustomer() {
                 />
               </div>
             </div>
-            <button className="submit-button" type="submit">Create Agreement</button>
           </form>
+          <button className="submit-button" type="submit">Create Agreement</button>
+
         </div>
       </div>
     </div>
