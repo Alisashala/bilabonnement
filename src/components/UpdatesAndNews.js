@@ -9,7 +9,9 @@ function UpdatesAndNews() {
     <div className="updates-and-news-container">
       <header>
         <div className="logo-container">
+        <Link to="/" className="logo-container2">
           <img src="logoimage.png" alt="Logo" className="logo" />
+          </Link>
         </div>
         <nav>
           <ul style={{ marginLeft: 'auto' }}>

@@ -8,8 +8,9 @@ function Header() {
   return (
     <header>
       <div className="header-container">
-        <div className="logo-container2">
-          <img src="logoimage.png" alt="Logo" className="logo" />
+          <Link to="/" className="logo-container2">
+            <img src="logoimage.png" alt="Logo" className="logo" />
+         </Link>
         </div>
         <nav>
           <ul>
@@ -20,7 +21,6 @@ function Header() {
             </li>
           </ul>
         </nav>
-      </div>
     </header>
   );
 }

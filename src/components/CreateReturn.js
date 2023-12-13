@@ -29,10 +29,10 @@ function CreateReturn() {
   return (
     <div>
       <header>
-        <div className="header-container">
-          <div className="logo-container2">
+      <div className="header-container">
+         <Link to="/" className="logo-container2">
             <img src="logoimage.png" alt="Logo" className="logo" />
-          </div>
+          </Link>
           <nav>
             <ul>
               <li>

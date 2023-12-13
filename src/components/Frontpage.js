@@ -4,12 +4,11 @@ import '../styling/Frontpage.css';
 
 function Frontpage() {
   return (
-    
     <div className="frontpage-container">
       <header>
-        <div className="logo-container1">
+        <Link to="/" className="logo-container1">
           <img src="logoimage.png" alt="Logo" className="logo" />
-        </div>
+        </Link>
         <nav>
           <ul style={{ marginLeft: 'auto' }}>
             <li>
@@ -56,19 +55,15 @@ function Frontpage() {
         </div>
 
         <div className="big-box-part">
-          <Link to={`/damagereports`} className="box-link view-returns-box">
+          <Link to="/damagereports" className="box-link view-returns-box">
             <div className="box view-returns-box">
               <h2>View Returns</h2>
             </div>
-          </Link> 
+          </Link>
         </div>
       </div>
     </div>
-
-    
   );
-
-  
 }
 
 export default Frontpage;

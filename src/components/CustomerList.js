@@ -6,10 +6,10 @@ import '../styling/CustomerList.css';
 function Header() {
   return (
     <header>
-      <div className="header-container">
-        <div className="logo-container2">
-          <img src="logoimage.png" alt="Logo" className="logo" />
-        </div>
+       <div className="header-container">
+         <Link to="/" className="logo-container2">
+           <img src="logoimage.png" alt="Logo" className="logo" />
+          </Link>
         <nav>
           <ul>
             <li>
