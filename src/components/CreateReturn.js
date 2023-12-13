@@ -47,7 +47,7 @@ function CreateReturn() {
 
       <div className="create-return-container2">
         <div className="create-return-box2">
-          <h2>Create New Return</h2>
+          <h1>Create New Return</h1>
           <label>Brand</label>
           <input
             name="brand"

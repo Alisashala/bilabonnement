@@ -6,6 +6,7 @@
   text-align: center;
 }
 
+
 /* Add style to frontpage content */
 .frontpage-content {
   display: flex;
@@ -83,17 +84,18 @@ h2 {
   margin-top: 20px;
   text-align: center;
   cursor: pointer;
+  border-radius: 30px;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
 .box h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #add8e6;
+  color: #80abb9;
 }
 
 .box:hover {
-  background-color: #3e505a;
+  background-color: #374c57;
   color: #fff;
 }
 
@@ -108,8 +110,8 @@ h2 {
 }
 
 .welcome-text h1 {
-  font-size: 20px;
-  color: #333;
+  font-size: 40px;
+  color: #232222;
 }
 
 .logo-container1 {
@@ -123,3 +125,4 @@ h2 {
   margin-right: 20px;
   margin-bottom: 10px;
 }
+
