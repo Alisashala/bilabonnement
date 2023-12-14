@@ -12,7 +12,7 @@ import UpdatesAndNews from './components/UpdatesAndNews';
 import ReturnedList from './components/ReturnedList';
 import ReturnDetails from './components/ReturnDetails';
 import DeleteReturn from './components/DeleteReturn';
-import DamageCostOverview from './components/DamageCostOverview'; // Import the new component
+import DamageCostOverview from './components/DamageCostOverview'; 
 
 function App() {
   return (
@@ -29,10 +29,10 @@ function App() {
         <Route path="/create-return" element={<CreateReturn />} />
         <Route path="/damagereports" element={<ReturnedList />} />
         <Route path="/damagereports/:id" element={<ReturnDetails />} />
-        <Route path="/damage-cost-overview" element={<DamageCostOverview />} /> {/* New route for DamageCostOverview */}
+        <Route path="/damage-cost-overview" element={<DamageCostOverview />} /> 
 
         <Route path="/support-and-help" element={<SupportAndHelp />} />
-        <Route path="/updates-and-news" element={<UpdatesAndNews />} />
+        <Route path="/updates-and-news" element={<UpdatesAndNews/>} />
       </Routes>
     </Router>
   );
