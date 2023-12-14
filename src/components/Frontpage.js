@@ -49,7 +49,7 @@ function Frontpage() {
         <div className="big-box-part">
           <Link to="/create-return" className="box-link create-return-box">
             <div className="box create-return-box">
-              <h2>Create Return</h2>
+              <h2>Create Damage Report</h2>
             </div>
           </Link>
         </div>
@@ -57,7 +57,7 @@ function Frontpage() {
         <div className="big-box-part">
           <Link to="/damagereports" className="box-link view-returns-box">
             <div className="box view-returns-box">
-              <h2>View Returns</h2>
+              <h2>View Damage Reports</h2>
             </div>
           </Link>
         </div>

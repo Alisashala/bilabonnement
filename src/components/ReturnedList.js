@@ -38,7 +38,7 @@ function ReturnedList() {
     <div>
       <Header />
       <div id="customer-list-container">
-        <h2 id="customer-list-title">Returned List</h2>
+        <h2 id="customer-list-title">Damage Report List</h2>
         <ul id="customer-list">
           {returns.map(newReturn => (
             <li key={newReturn.id} className="customer-list-item">
@@ -62,7 +62,7 @@ function ReturnedList() {
               Damage Cost Overview
             </Link>
             <Link to="/create-return" id="add-return-link" >
-              Add New Return
+              Add New Damage Report
             </Link>
           </div>
       </div>

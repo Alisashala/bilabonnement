@@ -47,7 +47,7 @@ function CreateReturn() {
 
       <div className="create-return-container2">
         <div className="create-return-box2">
-          <h1>Create New Return</h1>
+          <h1>Create New Damage Report</h1>
           <label>Brand</label>
           <input
             name="brand"
@@ -102,7 +102,7 @@ function CreateReturn() {
           />
 
           <button className="submit-button" type="submit" onClick={handleSubmit}>
-            Create Return
+            Create Damage Report
           </button>
         </div>
       </div>
