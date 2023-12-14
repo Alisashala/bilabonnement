@@ -1,8 +1,6 @@
-// src/components/UpdatesAndNews.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styling/UpdatesAndNews.css'; // Import the CSS file
+import '../styling/UpdatesAndNews.css'; 
 
 function UpdatesAndNews() {
   return (

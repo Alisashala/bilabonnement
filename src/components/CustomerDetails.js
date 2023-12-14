@@ -1,14 +1,17 @@
-// CustomerDetails.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
-import '../styling/CustomerDetails.css'; // Import the CSS file
+import '../styling/CustomerDetails.css'; 
 
+// CustomerDetails-komponenten, der viser detaljer om en specifik kunde
 function CustomerDetails() {
+  // Henter kunde-ID fra URL-parametre
   const { id } = useParams();
+    // Tilstand til at gemme kundedata
   const [customer, setCustomer] = useState(null);
 
+
+  // Effekt-hook til at hente kundedetaljer fra API ved komponentindlæsning
   useEffect(() => {
     axios.get(`http://localhost:8080/api/customers/${id}`)
       .then(response => {
@@ -17,6 +20,7 @@ function CustomerDetails() {
       .catch(error => console.error('Error fetching customer:', error));
   }, [id]);
 
+  // Hvis kundedata ikke er tilgængeligt, vises en "Loading..."-meddelelse
   if (!customer) return <div>Loading...</div>;
 
   return (

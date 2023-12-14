@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
-import '../styling/ReturnDetails.css'; // Import the CSS file
+import '../styling/ReturnDetails.css'; 
 
 function ReturnDetails() {
+
+   // Henter skaderapportens ID fra URL-parametre ved hjælp af useParams-hook
   const { id } = useParams();
+  // Tilstand til at gemme skaderapportens data
   const [returns, setReturns] = useState(null);
 
+  // Effekt-hook til at hente skaderapportens data baseret på ID ved komponentindlæsning
   useEffect(() => {
     axios.get(`http://localhost:8080/api/damagereports/${id}`)
       .then(response => {
@@ -15,6 +19,7 @@ function ReturnDetails() {
       .catch(error => console.error('Error fetching return:', error));
   }, [id]);
 
+  // Hvis skaderapportens data IKKE er indlæst endnu, vises en indlæsningsmeddelelse
   if (!returns) return <div>Loading...</div>;
 
   return (

@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
-import '../styling/CreateReturn.css'; // Import the existing CSS file
+import '../styling/CreateReturn.css'; 
 
+// Den funktionelle komponent til oprettelse af ny skaderapport
 function CreateReturn() {
+
+  // Hook der mulliggøre navigation mellem sider
   const navigate = useNavigate();
+
+  // State der administrere formdata for oprettelse af en ny skaderapport
   const [newReturn, setNewReturn] = useState({
     brand: '',
     model: '',
@@ -14,18 +19,24 @@ function CreateReturn() {
     damageCost: ''
   });
 
+  // Funktion til at håndtere indsendelse af formularen
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Bruger Axios til at sende en POST-anmodning til serveren med den nye skaderapport
     axios.post('http://localhost:8080/api/damagereports', newReturn)
-      .then(() => navigate('/damagereports'))
+      .then(() => navigate('/damagereports')) // Hvis det lykkes, naviger til 'damagereports'-endpointet
       .catch(error => console.error('Error creating return:', error));
   };
 
+   // Funktion til at håndtere ændringer i inputfelterne i formularen
   const handleChange = (e) => {
+    // Afgør typen af input og opdater den tilsvarende egenskab i staten
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
     setNewReturn({ ...newReturn, [e.target.name]: value });
   };
 
+   // Return / rendering af CreateReturn komponenten
   return (
     <div>
       <header>
@@ -44,7 +55,6 @@ function CreateReturn() {
           </nav>
         </div>
       </header>
-
       <div className="create-return-container2">
         <div className="create-return-box2">
           <h1>Create New Damage Report</h1>

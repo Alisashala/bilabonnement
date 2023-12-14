@@ -1,8 +1,6 @@
-// src/components/SupportAndHelp.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styling/SupportAndHelp.css'; // Import the CSS file
+import '../styling/SupportAndHelp.css'; 
 
 function SupportAndHelp() {
   return (
@@ -22,7 +20,7 @@ function SupportAndHelp() {
         </nav>
       </header>
 
-      <div className="support-and-help-content"> {/* Updated class name */}
+      <div className="support-and-help-content"> 
         <h1>Support and Help</h1>
         <p>
           If you need assistance or have any questions, our support team is here to help.

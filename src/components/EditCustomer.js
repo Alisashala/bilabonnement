@@ -4,8 +4,13 @@ import { useParams, useNavigate } from 'react-router-dom';
 import '../styling/EditCustomer.css';
 
 function EditCustomer() {
+    // Henter kunde-ID fra URL-parametre ved hjælp af useParams-hook
     const { id } = useParams();
+
+    // Hook der mulliggøre navigation mellem sider
     const navigate = useNavigate();
+
+    // Tilstand til at gemme kundeoplysninger
     const [customer, setCustomer] = useState({
         fullName: '',
         email: '',
@@ -17,12 +22,14 @@ function EditCustomer() {
         kml: ''
     });
 
+    // Effekt-hook til at hente kundeoplysninger baseret på ID ved komponentindlæsning
     useEffect(() => {
         axios.get(`http://localhost:8080/api/customers/${id}`)
             .then(response => setCustomer(response.data))
             .catch(error => console.error('Error fetching customer:', error));
     }, [id]);
 
+     // Funktion til at håndtere indsendelse af opdaterede kundeoplysninger
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.put(`http://localhost:8080/api/customers/${id}`, customer)
@@ -30,8 +37,11 @@ function EditCustomer() {
             .catch(error => console.error('Error updating customer:', error));
     };
 
+        // Funktion til at håndtere ændringer i inputfelterne
     const handleChange = (e) => {
+        // Afgør om input er en afkrydsningsfelttype
         const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+        // Opdaterer kundeoplysningerne baseret på det ændrede input
         setCustomer({ ...customer, [e.target.name]: value });
     };
 

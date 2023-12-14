@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom'; // Remove 'useNavigate' from this line
-import '../styling/CreateAgreement.css'; // Import the existing CSS file
+import { useNavigate, Link } from 'react-router-dom'; 
+import '../styling/CreateAgreement.css'; 
 
 
+// Den funktionelle komponent til oprettelse af ny kunde
 function CreateCustomer() {
+
+   // Hook der mulliggøre navigation mellem sider
   const navigate = useNavigate();
+
+  // State der administrere formdata for oprettelse af en ny kunde
   const [newCustomer, setNewCustomer] = useState({
     fullName: '',
     email: '',
@@ -18,21 +23,27 @@ function CreateCustomer() {
     kml: '',
   });
 
+   // Funktion til at håndtere indsendelse af formularen
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Bruger Axios til at sende en POST-anmodning til serveren med den nye kundedata
       axios.post('http://localhost:8080/api/customers', newCustomer)
-      .then(() => navigate('/customers'))
+      .then(() => navigate('/customers')) // Hvis det lykkes, naviger til 'customers'-endpointet
       .catch((error) =>
         console.error('Error creating customer:', error)
       );
   };
 
+  // Funktion til at håndtere ændringer i inputfelterne i formularen
   const handleChange = (e) => {
+    // Afgør typen af input og opdater den tilsvarende egenskab i staten
     const value =
       e.target.type === 'checkbox' ? e.target.checked : e.target.value;
     setNewCustomer({ ...newCustomer, [e.target.name]: value });
   };
 
+  // Return / rendering af createcustomer komponenten
   return (
     <div>
       <header>
@@ -51,7 +62,6 @@ function CreateCustomer() {
           </nav>
         </div>
       </header>
-
       <div className="create-customer-container">
         <div className="create-customer-box">
           <h1>Create New Agreement</h1>

@@ -1,17 +1,14 @@
-/* src/styling/CreateCustomer.css */
-
-/* Styles for the header */
 .header-container {
   background-color: #ffffff;
   padding: 10px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1); /* Only shadow on the bottom */
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1); 
   display: flex;
-  justify-content: space-between; /* Align items horizontally */
-  align-items: center; /* Center items vertically */
-  width: 100%; /* Adjust the width to make the header longer horizontally */
-  margin: auto; /* Center the header horizontally */
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%; 
+  margin: auto; 
 }
 
 .logo-container1 {
@@ -39,7 +36,7 @@
   color: #add8e6;
 }
 
-/* Styles for the main content */
+
 .create-customer-container {
   background-color: #ffffff;
   padding: 20px;
@@ -67,7 +64,7 @@
 .form-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px; /* Adjust the gap as needed */
+  gap: 20px; 
 }
 
 .form-section {
@@ -93,7 +90,7 @@
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box; /* Ensure padding and border don't affect width */
+  box-sizing: border-box; 
 }
 .car-details-row {
   display: flex;
@@ -102,7 +99,7 @@
 }
 
 .car-details-row div {
-  width: 48%; /* Adjust as needed, leaving a small gap between the fields */
+  width: 48%; 
 }
 
 .create-customer-box button {
@@ -124,5 +121,5 @@
 
 
 .form-section div {
-  width: 48%; /* Adjust as needed, leaving a small gap between the fields */
+  width: 48%; 
 }

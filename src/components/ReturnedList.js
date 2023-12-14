@@ -4,6 +4,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../styling/ReturnedList.css';
 
+
+// Header-komponenten, der indeholder navigationslink og logo
 function Header() {
   return (
     <header>
@@ -25,9 +27,12 @@ function Header() {
   );
 }
 
+// ReturnedList-komponenten, der viser en liste over skaderapporter
 function ReturnedList() {
+  // Tilstand til at gemme skaderapportdata
   const [returns, setReturns] = useState([]);
 
+  // Effekt-hook til at hente skaderapporter fra API ved komponentindlæsning
   useEffect(() => {
     axios.get('http://localhost:8080/api/damagereports')
       .then(response => setReturns(response.data))

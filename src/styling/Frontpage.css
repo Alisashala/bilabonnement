@@ -1,4 +1,3 @@
-/* Add style to frontpage container */
 .frontpage-container {
   background-color: #ffffff;
   padding: 20px;
@@ -7,7 +6,6 @@
 }
 
 
-/* Add style to frontpage content */
 .frontpage-content {
   display: flex;
   justify-content: space-evenly;
@@ -16,14 +14,12 @@
   margin-top: 20px;
 }
 
-/* Style the new container for the four boxes */
 .big-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
 
-/* Style each part of the big box */
 .big-box-part {
   flex: 1;
   min-width: 300px;
@@ -75,7 +71,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Center and style the content boxes */
+
 .box {
   flex: 1;
   min-width: 300px;

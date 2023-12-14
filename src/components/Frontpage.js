@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styling/Frontpage.css';
 
+// Frontsiden for webapplikationen, der indeholder navigationsmenu, velkomsttekst og links til forskellige sektioner
 function Frontpage() {
   return (
     <div className="frontpage-container">

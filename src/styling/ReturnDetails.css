@@ -17,7 +17,7 @@
 
 .return-details-box h2 {
     color: #333;
-    margin-bottom: 30px; /* Increased margin-bottom value */
+    margin-bottom: 30px; 
 }
 
 .return-details-box p {
@@ -32,7 +32,7 @@
     display: inline-block;
     background-color: #3e505a;
     color: #fff;
-    padding: 8px 16px; /* Smaller padding for a smaller button */
+    padding: 8px 16px; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
